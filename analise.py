@@ -1,3 +1,7 @@
+###########################################################################################
+# Os comentários desse código, foram realizados pelo o Chat-GPT para maior compreendimento.
+###########################################################################################
+
 import os
 from collections import defaultdict, Counter
 
@@ -9,11 +13,6 @@ def parse_line(line):
     # Divide a linha em partes pelo caractere '|'
     parts = line.strip().split('|')
     # Formato esperado: =|prefix|AS_PATH|peer_ip|...
-    # As posições podem variar, mas nos exemplos analisados:
-    # - parts[0]: '=' (ou outro indicador)
-    # - parts[1]: prefixo
-    # - parts[2]: as_path
-    # Ajuste caso necessário dependendo do formato final
     if len(parts) < 3:
         return None, None
     prefix = parts[1].strip()
